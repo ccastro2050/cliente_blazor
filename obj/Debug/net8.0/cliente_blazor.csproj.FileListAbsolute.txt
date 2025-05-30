@@ -1030,3 +1030,6 @@ C:\tutorial_monster\cliente_blazor\obj\Debug\net8.0\cliente_blazor.dll
 C:\tutorial_monster\cliente_blazor\obj\Debug\net8.0\refint\cliente_blazor.dll
 C:\tutorial_monster\cliente_blazor\obj\Debug\net8.0\cliente_blazor.pdb
 C:\tutorial_monster\cliente_blazor\obj\Debug\net8.0\ref\cliente_blazor.dll
+C:\tutorial_monster\cliente_blazor\bin\Debug\net8.0\publicado\web.config
+C:\tutorial_monster\cliente_blazor\bin\Debug\net8.0\publicado\wwwroot\sample-data\weather.json
+C:\tutorial_monster\cliente_blazor\bin\Debug\net8.0\publicado\wwwroot\_framework\blazor.boot.json

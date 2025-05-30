@@ -15,14 +15,13 @@ namespace cliente_blazor.Servicios
         // Obtener lista de personas desde la API
         public async Task<List<Persona>?> ObtenerPersonasAsync()
         {
-            return await clienteHttp.GetFromJsonAsync<List<Persona>>("http://localhost:5016/api/persona");
+            return await clienteHttp.GetFromJsonAsync<List<Persona>>("api/persona");
         }
 
         // Insertar persona en la API
         public async Task InsertarPersonaAsync(Persona persona)
         {
-            await clienteHttp.PostAsJsonAsync("http://localhost:5016/api/persona", persona);
+            await clienteHttp.PostAsJsonAsync("api/persona", persona);
         }
     }
 }
-// Este servicio se encarga de interactuar con la API para obtener y enviar datos de personas.

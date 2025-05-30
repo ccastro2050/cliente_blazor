@@ -1,0 +1,1 @@
+C:\tutorial_monster\cliente_blazor\publicado\web.config
