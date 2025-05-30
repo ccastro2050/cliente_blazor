@@ -7,10 +7,21 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-// Registrar HttpClient con la URL de la API
+// Definir la URL base de la API según el entorno
+string urlApi;
+
+#if DEBUG
+    // URL de la API local en desarrollo
+    urlApi = "https://localhost:5016/";
+#else
+    // URL pública de la API publicada en MonsterASP
+    urlApi = "https://apipersonas.runasp.net/";
+#endif
+
+// Registrar HttpClient con la URL correspondiente
 builder.Services.AddScoped(sp => new HttpClient
 {
-    BaseAddress = new Uri("https://localhost:5016/") // Reemplazar por la URL real de la API
+    BaseAddress = new Uri(urlApi)
 });
 
 // Registrar el servicio de persona
