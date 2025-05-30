@@ -1,0 +1,49 @@
+@page "/personas"
+@using cliente_blazor.Modelos
+@using cliente_blazor.Servicios
+@inject ServicioPersona servicioPersona
+
+<h3>Lista de Personas</h3>
+
+@if (listaPersonas == null)
+{
+    <p>Cargando...</p>
+}
+else if (listaPersonas.Count == 0)
+{
+    <p>No hay personas registradas.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Correo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var persona in listaPersonas)
+            {
+                <tr>
+                    <td>@persona.Id</td>
+                    <td>@persona.Nombre</td>
+                    <td>@persona.Edad</td>
+                    <td>@persona.Correo</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Persona>? listaPersonas;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Obtener lista de personas al iniciar el componente
+        listaPersonas = await servicioPersona.ObtenerPersonasAsync();
+    }
+}

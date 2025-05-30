@@ -1,4 +1,8 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components
+
+<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="">cliente_blazor</a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
@@ -24,6 +28,12 @@
                 <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
             </NavLink>
         </div>
+<div class="nav-item px-3">
+    <NavLink class="nav-link" href="personas">
+        Personas
+    </NavLink>
+</div>
+
     </nav>
 </div>
 
